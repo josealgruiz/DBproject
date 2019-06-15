@@ -1,12 +1,9 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const peliculasDB_1 = __importDefault(require("../peliculasDB"));
+//import pool from '../peliculasDB';
 class PeliculasController {
     index(req, res) {
-        peliculasDB_1.default.query('DESCRIBE movies');
+        // pool.query('DESCRIBE movies');
         res.json('Peliculas');
     }
 }

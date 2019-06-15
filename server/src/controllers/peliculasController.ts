@@ -1,10 +1,10 @@
 import {Request, Response} from 'express';
-import pool from '../peliculasDB';
+//import pool from '../peliculasDB';
  
 class PeliculasController {
 
     public index (req: Request, res: Response) {
-       pool.query('DESCRIBE movies');
+      // pool.query('DESCRIBE movies');
         res.json('Peliculas');
 
     } 
