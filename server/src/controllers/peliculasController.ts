@@ -6,7 +6,7 @@ var pool = mysql.createPool({ host: 'localhost', user: 'root', password: '123123
    
 class PeliculasController {
     //consultar todas las peliculas 
-    public async list(req: Request, res: Response): Promise<void> {
+    public async list(req: Request, res: Response) {
         const movies = await pool.query('SELECT * FROM movies');
         res.json(movies); 
     } 
