@@ -11,7 +11,11 @@ public router: Router = Router();
     }
 
     config ():void {
-        this.router.get('/', peliculasController.index);
+        this.router.get('/', peliculasController.list);
+        this.router.get('/:id', peliculasController.getOne);
+        this.router.post('/', peliculasController.create);
+        this.router.delete('/:id', peliculasController.delete);
+        this.router.put('/:id', peliculasController.put);
     }
 
 }

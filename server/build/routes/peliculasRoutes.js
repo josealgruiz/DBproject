@@ -8,7 +8,11 @@ class PeliculasRoutes {
         this.config();
     }
     config() {
-        this.router.get('/', peliculasController_1.peliculasController.index);
+        this.router.get('/', peliculasController_1.peliculasController.list);
+        this.router.get('/:id', peliculasController_1.peliculasController.getOne);
+        this.router.post('/', peliculasController_1.peliculasController.create);
+        this.router.delete('/:id', peliculasController_1.peliculasController.delete);
+        this.router.put('/:id', peliculasController_1.peliculasController.put);
     }
 }
 const peliculasRoutes = new PeliculasRoutes();

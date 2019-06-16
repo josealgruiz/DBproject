@@ -1,18 +1,15 @@
 "use strict";
-var mySQL = require('mysql');
-var pool = mySQL.createPool({ host: 'localhost',
-    user: 'root',
-    password: '123123',
-    database: 'movies_db',
-    port: 3307, });
-var getConnection = function () {
-    pool.getConnection(function (err, connection) {
-        if (err)
-            throw err;
-        return connection;
-    });
-};
-module.exports = getConnection;
+/*export module db {
+  var mySQL = require('mysql');
+  var pool;
+  export function dbpool(){
+    return pool = mySQL.createPool({ host: 'localhost', user: 'root', password: '123123', database: 'movies_db', port: 3307});
+     
+  }
+      
+}
+
+*/
 /*import keys from './keys'
 
 var mysql      = require('mysql');
